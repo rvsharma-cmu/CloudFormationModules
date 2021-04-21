@@ -1,0 +1,1041 @@
+[2021-04-18T20:58:19Z] DEBUG    - Logging set up successfully
+[2021-04-18T20:58:19Z] DEBUG    - Running None: Namespace(artifact_type=None, command=<function init at 0x7fcd494d5950>, force=False, subparser_name=None, type_name=None, verbose=0, version=False)
+[2021-04-18T20:58:19Z] DEBUG    - Root directory: /Users/raghavs/cfnmodule
+[2021-04-18T20:58:19Z] WARNING  - Initializing new project
+[2021-04-18T20:58:19Z] DEBUG    - Loading project file '/Users/raghavs/cfnmodule/.rpdk-config'
+[2021-04-18T21:01:11Z] DEBUG    - Resource type identifier: MyCompany::S3::Bucket::MODULE
+[2021-04-18T21:01:11Z] DEBUG    - Overwriting '/Users/raghavs/cfnmodule/.rpdk-config'
+[2021-04-18T21:01:11Z] DEBUG    - Fragment directory: /Users/raghavs/cfnmodule/fragments
+[2021-04-18T21:01:11Z] DEBUG    - Overwriting '/Users/raghavs/cfnmodule/fragments/sample.json'
+[2021-04-18T21:01:11Z] WARNING  - Initialized a new project in /Users/raghavs/cfnmodule
+[2021-04-18T21:01:11Z] DEBUG    - Finished None
+[2021-04-18T21:05:39Z] DEBUG    - Logging set up successfully
+[2021-04-18T21:05:39Z] DEBUG    - Running submit: Namespace(command=<function submit at 0x7f89ec854950>, dry_run=False, endpoint_url=None, region=None, role_arn=None, set_default=False, subparser_name='submit', use_role=True, verbose=0, version=False)
+[2021-04-18T21:05:39Z] DEBUG    - Root directory: /Users/raghavs/cfnmodule
+[2021-04-18T21:05:39Z] DEBUG    - Loading project file '/Users/raghavs/cfnmodule/.rpdk-config'
+[2021-04-18T21:05:39Z] INFO     - Validating your module fragments...
+[2021-04-18T21:05:39Z] DEBUG    - Fragment directory: /Users/raghavs/cfnmodule/fragments
+[2021-04-18T21:05:39Z] DEBUG    - Invalid template fragment: A Module can only consist of a single template file, but there are 2: ['/Users/raghavs/cfnmodule/fragments/s3.json', '/Users/raghavs/cfnmodule/fragments/default_sample.json']
+Traceback (most recent call last):
+  File "/Users/raghavs/cfnmodule/env/lib/python3.7/site-packages/rpdk/core/project.py", line 425, in load
+    self._validate_fragments(template_fragment)
+  File "/Users/raghavs/cfnmodule/env/lib/python3.7/site-packages/rpdk/core/project.py", line 455, in _validate_fragments
+    template_fragment.validate_fragments()
+  File "/Users/raghavs/cfnmodule/env/lib/python3.7/site-packages/rpdk/core/fragment/generator.py", line 71, in validate_fragments
+    raw_fragments = read_raw_fragments(self.fragment_dir)
+  File "/Users/raghavs/cfnmodule/env/lib/python3.7/site-packages/rpdk/core/fragment/module_fragment_reader.py", line 14, in read_raw_fragments
+    return _load_fragment(_get_fragment_file(fragment_dir))
+  File "/Users/raghavs/cfnmodule/env/lib/python3.7/site-packages/rpdk/core/fragment/module_fragment_reader.py", line 48, in _get_fragment_file
+    + str(all_fragment_files)
+rpdk.core.exceptions.FragmentValidationError: A Module can only consist of a single template file, but there are 2: ['/Users/raghavs/cfnmodule/fragments/s3.json', '/Users/raghavs/cfnmodule/fragments/default_sample.json']
+[2021-04-18T21:05:39Z] DEBUG    - Caught exit recommendation
+Traceback (most recent call last):
+  File "/Users/raghavs/cfnmodule/env/lib/python3.7/site-packages/rpdk/core/project.py", line 425, in load
+    self._validate_fragments(template_fragment)
+  File "/Users/raghavs/cfnmodule/env/lib/python3.7/site-packages/rpdk/core/project.py", line 455, in _validate_fragments
+    template_fragment.validate_fragments()
+  File "/Users/raghavs/cfnmodule/env/lib/python3.7/site-packages/rpdk/core/fragment/generator.py", line 71, in validate_fragments
+    raw_fragments = read_raw_fragments(self.fragment_dir)
+  File "/Users/raghavs/cfnmodule/env/lib/python3.7/site-packages/rpdk/core/fragment/module_fragment_reader.py", line 14, in read_raw_fragments
+    return _load_fragment(_get_fragment_file(fragment_dir))
+  File "/Users/raghavs/cfnmodule/env/lib/python3.7/site-packages/rpdk/core/fragment/module_fragment_reader.py", line 48, in _get_fragment_file
+    + str(all_fragment_files)
+rpdk.core.exceptions.FragmentValidationError: A Module can only consist of a single template file, but there are 2: ['/Users/raghavs/cfnmodule/fragments/s3.json', '/Users/raghavs/cfnmodule/fragments/default_sample.json']
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raghavs/cfnmodule/env/lib/python3.7/site-packages/rpdk/core/cli.py", line 100, in main
+    args.command(args)
+  File "/Users/raghavs/cfnmodule/env/lib/python3.7/site-packages/rpdk/core/submit.py", line 14, in submit
+    project.load()
+  File "/Users/raghavs/cfnmodule/env/lib/python3.7/site-packages/rpdk/core/project.py", line 428, in load
+    self._raise_invalid_project(msg, e)
+  File "/Users/raghavs/cfnmodule/env/lib/python3.7/site-packages/rpdk/core/project.py", line 184, in _raise_invalid_project
+    raise InvalidProjectError(msg) from e
+rpdk.core.exceptions.InvalidProjectError: Invalid template fragment: A Module can only consist of a single template file, but there are 2: ['/Users/raghavs/cfnmodule/fragments/s3.json', '/Users/raghavs/cfnmodule/fragments/default_sample.json']
+[2021-04-18T21:05:39Z] CRITICAL - Invalid template fragment: A Module can only consist of a single template file, but there are 2: ['/Users/raghavs/cfnmodule/fragments/s3.json', '/Users/raghavs/cfnmodule/fragments/default_sample.json']
+[2021-04-18T21:06:25Z] DEBUG    - Logging set up successfully
+[2021-04-18T21:06:25Z] DEBUG    - Running submit: Namespace(command=<function submit at 0x7fa1c528e950>, dry_run=False, endpoint_url=None, region=None, role_arn=None, set_default=False, subparser_name='submit', use_role=True, verbose=0, version=False)
+[2021-04-18T21:06:25Z] DEBUG    - Root directory: /Users/raghavs/cfnmodule
+[2021-04-18T21:06:25Z] DEBUG    - Loading project file '/Users/raghavs/cfnmodule/.rpdk-config'
+[2021-04-18T21:06:25Z] INFO     - Validating your module fragments...
+[2021-04-18T21:06:25Z] DEBUG    - Fragment directory: /Users/raghavs/cfnmodule/fragments
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Ref as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::Sub as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::FindInMap as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::Equals as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Transform templates if needed
+[2021-04-18T21:06:26Z] INFO     - Run scan of template /Users/raghavs/cfnmodule/fragments/s3.json
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3001 at 2021-04-18 17:06:26.395496
+[2021-04-18T21:06:26Z] DEBUG    - Validating resource KmsKey base configuration
+[2021-04-18T21:06:26Z] DEBUG    - Check resource types by region...
+[2021-04-18T21:06:26Z] DEBUG    - Validating resource KmsKeyAlias base configuration
+[2021-04-18T21:06:26Z] DEBUG    - Check resource types by region...
+[2021-04-18T21:06:26Z] DEBUG    - Validating resource Bucket base configuration
+[2021-04-18T21:06:26Z] DEBUG    - Check resource types by region...
+[2021-04-18T21:06:26Z] DEBUG    - Validating resource BucketPolicy base configuration
+[2021-04-18T21:06:26Z] DEBUG    - Check resource types by region...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3001 at 2021-04-18 17:06:26.397023.  Ran in 0:00:00.001530
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3001 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3036 at 2021-04-18 17:06:26.398362
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3036 at 2021-04-18 17:06:26.398586.  Ran in 0:00:00.000226
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3036 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3005 at 2021-04-18 17:06:26.398799
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3005 at 2021-04-18 17:06:26.399241.  Ran in 0:00:00.000447
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3005 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W4002 at 2021-04-18 17:06:26.399500
+[2021-04-18T21:06:26Z] DEBUG    - Get parameters from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W4002 at 2021-04-18 17:06:26.399786.  Ran in 0:00:00.000288
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W4002 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3010 at 2021-04-18 17:06:26.399955
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3010 at 2021-04-18 17:06:26.400128.  Ran in 0:00:00.000174
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3010 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3000 at 2021-04-18 17:06:26.400283
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3000 at 2021-04-18 17:06:26.400362.  Ran in 0:00:00.000081
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3000 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W3005 at 2021-04-18 17:06:26.400524
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W3005 at 2021-04-18 17:06:26.400706.  Ran in 0:00:00.000183
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W3005 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3038 at 2021-04-18 17:06:26.400856
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3038 at 2021-04-18 17:06:26.401056.  Ran in 0:00:00.000202
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3038 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3035 at 2021-04-18 17:06:26.401209
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Validating DeletionPolicy for KmsKey base configuration
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3035 at 2021-04-18 17:06:26.401698.  Ran in 0:00:00.000492
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3035 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3011 at 2021-04-18 17:06:26.401873
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3011 at 2021-04-18 17:06:26.401966.  Ran in 0:00:00.000095
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3011 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E5001 at 2021-04-18 17:06:26.402122
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E5001 at 2021-04-18 17:06:26.402395.  Ran in 0:00:00.000275
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E5001 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3004 at 2021-04-18 17:06:26.402564
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Ref as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::GetAtt as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::Sub as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3004 at 2021-04-18 17:06:26.404164.  Ran in 0:00:00.001603
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3004 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3006 at 2021-04-18 17:06:26.404368
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3006 at 2021-04-18 17:06:26.404476.  Ran in 0:00:00.000109
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3006 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W3011 at 2021-04-18 17:06:26.404636
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W3011 at 2021-04-18 17:06:26.404824.  Ran in 0:00:00.000189
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W3011 are [<cfnlint.rules.RuleMatch object at 0x7fa1d333d350>]: 
+[2021-04-18T21:06:26Z] DEBUG    - Get location of path ['Resources', 'KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get location of path ['KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get location of object...
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3007 at 2021-04-18 17:06:26.405366
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3007 at 2021-04-18 17:06:26.405542.  Ran in 0:00:00.000177
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3007 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2529 at 2021-04-18 17:06:26.405700
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2529 at 2021-04-18 17:06:26.405866.  Ran in 0:00:00.000167
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2529 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3013 at 2021-04-18 17:06:26.406020
+[2021-04-18T21:06:26Z] DEBUG    - Get Properties from a resource: ['AWS::CloudFront::Distribution', 'DistributionConfig']
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3013 at 2021-04-18 17:06:26.406658.  Ran in 0:00:00.000640
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3013 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3042 at 2021-04-18 17:06:26.406826
+[2021-04-18T21:06:26Z] DEBUG    - Get Properties from a resource: ['AWS::ECS::TaskDefinition', 'ContainerDefinitions']
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3042 at 2021-04-18 17:06:26.407063.  Ran in 0:00:00.000239
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3042 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2541 at 2021-04-18 17:06:26.407216
+[2021-04-18T21:06:26Z] DEBUG    - Get Properties from a resource: ['AWS::CodePipeline::Pipeline']
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2541 at 2021-04-18 17:06:26.407443.  Ran in 0:00:00.000228
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2541 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2540 at 2021-04-18 17:06:26.407593
+[2021-04-18T21:06:26Z] DEBUG    - Get Properties from a resource: ['AWS::CodePipeline::Pipeline']
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2540 at 2021-04-18 17:06:26.407822.  Ran in 0:00:00.000230
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2540 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2503 at 2021-04-18 17:06:26.407973
+[2021-04-18T21:06:26Z] DEBUG    - Get Properties from a resource: ['AWS::ElasticLoadBalancingV2::Listener']
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get Properties from a resource: ['AWS::ElasticLoadBalancing::LoadBalancer', 'Listeners']
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2503 at 2021-04-18 17:06:26.408583.  Ran in 0:00:00.000612
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2503 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2506 at 2021-04-18 17:06:26.408756
+[2021-04-18T21:06:26Z] DEBUG    - Search for key ImageId as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Get all valid REFs from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2506 at 2021-04-18 17:06:26.409226.  Ran in 0:00:00.000472
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2506 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3002 at 2021-04-18 17:06:26.409591
+[2021-04-18T21:06:26Z] DEBUG    - Get names of all parameters from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3002 at 2021-04-18 17:06:26.409996.  Ran in 0:00:00.000407
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3002 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3003 at 2021-04-18 17:06:26.410168
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3003 at 2021-04-18 17:06:26.410336.  Ran in 0:00:00.000169
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3003 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2501 at 2021-04-18 17:06:26.410508
+[2021-04-18T21:06:26Z] DEBUG    - Get names of all parameters from template...
+[2021-04-18T21:06:26Z] DEBUG    - Search for key AccountPassword as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Search for key AdminPassword as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Search for key ADDomainJoinPassword as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Search for key CrossRealmTrustPrincipalPassword as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Search for key KdcAdminPassword as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Password as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Search for key DbPassword as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Search for key MasterUserPassword as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Search for key PasswordParam as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2501 at 2021-04-18 17:06:26.413010.  Ran in 0:00:00.002504
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2501 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3016 at 2021-04-18 17:06:26.413172
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3016 at 2021-04-18 17:06:26.413340.  Ran in 0:00:00.000169
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3016 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3025 at 2021-04-18 17:06:26.413499
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3025 at 2021-04-18 17:06:26.413658.  Ran in 0:00:00.000160
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3025 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3022 at 2021-04-18 17:06:26.413810
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3022 at 2021-04-18 17:06:26.413967.  Ran in 0:00:00.000158
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3022 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2506 at 2021-04-18 17:06:26.414118
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2506 at 2021-04-18 17:06:26.414359.  Ran in 0:00:00.000243
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2506 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2504 at 2021-04-18 17:06:26.414510
+[2021-04-18T21:06:26Z] DEBUG    - Get Properties from a resource: ['AWS::EC2::Instance', 'BlockDeviceMappings']
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get Properties from a resource: ['AWS::AutoScaling::LaunchConfiguration', 'BlockDeviceMappings']
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2504 at 2021-04-18 17:06:26.414895.  Ran in 0:00:00.000387
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2504 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3020 at 2021-04-18 17:06:26.415048
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get Properties from a resource: ['AWS::Route53::RecordSetGroup', 'RecordSets']
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3020 at 2021-04-18 17:06:26.415580.  Ran in 0:00:00.000535
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3020 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E8003 at 2021-04-18 17:06:26.415742
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::Equals as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Get all valid REFs from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E8003 at 2021-04-18 17:06:26.416306.  Ran in 0:00:00.000567
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E8003 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E8002 at 2021-04-18 17:06:26.416538
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::If as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Condition as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E8002 at 2021-04-18 17:06:26.417523.  Ran in 0:00:00.000988
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E8002 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E8001 at 2021-04-18 17:06:26.417796
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E8001 at 2021-04-18 17:06:26.417895.  Ran in 0:00:00.000101
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E8001 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W8001 at 2021-04-18 17:06:26.418051
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W8001 at 2021-04-18 17:06:26.418136.  Ran in 0:00:00.000087
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W8001 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E8006 at 2021-04-18 17:06:26.418383
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::Or as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E8006 at 2021-04-18 17:06:26.418771.  Ran in 0:00:00.000390
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E8006 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E8005 at 2021-04-18 17:06:26.418930
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::Not as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E8005 at 2021-04-18 17:06:26.419266.  Ran in 0:00:00.000337
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E8005 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E8004 at 2021-04-18 17:06:26.419422
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::And as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E8004 at 2021-04-18 17:06:26.419756.  Ran in 0:00:00.000335
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E8004 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2001 at 2021-04-18 17:06:26.419911
+[2021-04-18T21:06:26Z] DEBUG    - Get parameters from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2001 at 2021-04-18 17:06:26.420105.  Ran in 0:00:00.000196
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2001 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2012 at 2021-04-18 17:06:26.420278
+[2021-04-18T21:06:26Z] DEBUG    - Get parameters from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2012 at 2021-04-18 17:06:26.420543.  Ran in 0:00:00.000267
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2012 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2001 at 2021-04-18 17:06:26.420731
+[2021-04-18T21:06:26Z] DEBUG    - Get parameters from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2001 at 2021-04-18 17:06:26.421311.  Ran in 0:00:00.000582
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2001 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2010 at 2021-04-18 17:06:26.421490
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2010 at 2021-04-18 17:06:26.421580.  Ran in 0:00:00.000092
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2010 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2002 at 2021-04-18 17:06:26.421736
+[2021-04-18T21:06:26Z] DEBUG    - Get parameters from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2002 at 2021-04-18 17:06:26.421897.  Ran in 0:00:00.000162
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2002 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2015 at 2021-04-18 17:06:26.422049
+[2021-04-18T21:06:26Z] DEBUG    - Get parameters from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2015 at 2021-04-18 17:06:26.422705.  Ran in 0:00:00.000658
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2015 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2011 at 2021-04-18 17:06:26.422902
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2011 at 2021-04-18 17:06:26.422995.  Ran in 0:00:00.000095
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2011 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2003 at 2021-04-18 17:06:26.423173
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2003 at 2021-04-18 17:06:26.423386.  Ran in 0:00:00.000215
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2003 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2014 at 2021-04-18 17:06:26.423555
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Ref as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2014 at 2021-04-18 17:06:26.423955.  Ran in 0:00:00.000402
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2014 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W1001 at 2021-04-18 17:06:26.424125
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Ref as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Resources', 'KmsKey', 'Properties', 'KeyPolicy', 'Statement', 1, 'Principal', 'AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['KmsKey', 'Properties', 'KeyPolicy', 'Statement', 1, 'Principal', 'AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Properties', 'KeyPolicy', 'Statement', 1, 'Principal', 'AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['KeyPolicy', 'Statement', 1, 'Principal', 'AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Statement', 1, 'Principal', 'AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path [1, 'Principal', 'AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Principal', 'AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Resources', 'KmsKey', 'Properties', 'KeyPolicy', 'Statement', 2, 'Principal', 'AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['KmsKey', 'Properties', 'KeyPolicy', 'Statement', 2, 'Principal', 'AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Properties', 'KeyPolicy', 'Statement', 2, 'Principal', 'AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['KeyPolicy', 'Statement', 2, 'Principal', 'AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Statement', 2, 'Principal', 'AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path [2, 'Principal', 'AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Principal', 'AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Resources', 'KmsKeyAlias', 'Properties', 'TargetKeyId', 'Ref', 'KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['KmsKeyAlias', 'Properties', 'TargetKeyId', 'Ref', 'KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Properties', 'TargetKeyId', 'Ref', 'KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['TargetKeyId', 'Ref', 'KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Ref', 'KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Resources', 'Bucket', 'Properties', 'BucketEncryption', 'ServerSideEncryptionConfiguration', 0, 'ServerSideEncryptionByDefault', 'KMSMasterKeyID', 'Ref', 'KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Bucket', 'Properties', 'BucketEncryption', 'ServerSideEncryptionConfiguration', 0, 'ServerSideEncryptionByDefault', 'KMSMasterKeyID', 'Ref', 'KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Properties', 'BucketEncryption', 'ServerSideEncryptionConfiguration', 0, 'ServerSideEncryptionByDefault', 'KMSMasterKeyID', 'Ref', 'KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['BucketEncryption', 'ServerSideEncryptionConfiguration', 0, 'ServerSideEncryptionByDefault', 'KMSMasterKeyID', 'Ref', 'KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['ServerSideEncryptionConfiguration', 0, 'ServerSideEncryptionByDefault', 'KMSMasterKeyID', 'Ref', 'KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path [0, 'ServerSideEncryptionByDefault', 'KMSMasterKeyID', 'Ref', 'KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['ServerSideEncryptionByDefault', 'KMSMasterKeyID', 'Ref', 'KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['KMSMasterKeyID', 'Ref', 'KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Ref', 'KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['KmsKey']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Resources', 'BucketPolicy', 'Properties', 'Bucket', 'Ref', 'Bucket']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['BucketPolicy', 'Properties', 'Bucket', 'Ref', 'Bucket']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Properties', 'Bucket', 'Ref', 'Bucket']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Bucket', 'Ref', 'Bucket']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Ref', 'Bucket']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Bucket']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Resources', 'BucketPolicy', 'Properties', 'PolicyDocument', 'Statement', 4, 'Principal', 'AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['BucketPolicy', 'Properties', 'PolicyDocument', 'Statement', 4, 'Principal', 'AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Properties', 'PolicyDocument', 'Statement', 4, 'Principal', 'AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['PolicyDocument', 'Statement', 4, 'Principal', 'AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Statement', 4, 'Principal', 'AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path [4, 'Principal', 'AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Principal', 'AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['AWS', 'Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Ref', 'ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['ReadOnlyArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Resources', 'BucketPolicy', 'Properties', 'PolicyDocument', 'Statement', 5, 'Principal', 'AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['BucketPolicy', 'Properties', 'PolicyDocument', 'Statement', 5, 'Principal', 'AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Properties', 'PolicyDocument', 'Statement', 5, 'Principal', 'AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['PolicyDocument', 'Statement', 5, 'Principal', 'AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Statement', 5, 'Principal', 'AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path [5, 'Principal', 'AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Principal', 'AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['AWS', 'Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Ref', 'ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['ReadWriteArn']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Outputs', 'BucketName', 'Value', 'Ref', 'Bucket']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['BucketName', 'Value', 'Ref', 'Bucket']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Value', 'Ref', 'Bucket']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Ref', 'Bucket']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Bucket']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Outputs', 'KmsKeyAlias', 'Value', 'Ref', 'KmsKeyAlias']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['KmsKeyAlias', 'Value', 'Ref', 'KmsKeyAlias']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Value', 'Ref', 'KmsKeyAlias']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Ref', 'KmsKeyAlias']
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['KmsKeyAlias']
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::GetAtt as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Outputs', 'BucketArn', 'Value', 'Fn::GetAtt', ['Bucket', 'Arn']]
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['BucketArn', 'Value', 'Fn::GetAtt', ['Bucket', 'Arn']]
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Value', 'Fn::GetAtt', ['Bucket', 'Arn']]
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Fn::GetAtt', ['Bucket', 'Arn']]
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path [['Bucket', 'Arn']]
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Outputs', 'KmsKeyArn', 'Value', 'Fn::GetAtt', ['KmsKey', 'Arn']]
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['KmsKeyArn', 'Value', 'Fn::GetAtt', ['KmsKey', 'Arn']]
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Value', 'Fn::GetAtt', ['KmsKey', 'Arn']]
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path ['Fn::GetAtt', ['KmsKey', 'Arn']]
+[2021-04-18T21:06:26Z] DEBUG    - Get conditions for path [['KmsKey', 'Arn']]
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W1001 at 2021-04-18 17:06:26.433497.  Ran in 0:00:00.009376
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W1001 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W1019 at 2021-04-18 17:06:26.433731
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::Sub as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W1019 at 2021-04-18 17:06:26.434109.  Ran in 0:00:00.000380
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W1019 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1021 at 2021-04-18 17:06:26.434300
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::Base64 as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1021 at 2021-04-18 17:06:26.434645.  Ran in 0:00:00.000347
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1021 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1010 at 2021-04-18 17:06:26.434805
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::GetAtt as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1010 at 2021-04-18 17:06:26.435260.  Ran in 0:00:00.000456
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1010 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1024 at 2021-04-18 17:06:26.435533
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::Cidr as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1024 at 2021-04-18 17:06:26.436024.  Ran in 0:00:00.000494
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1024 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1011 at 2021-04-18 17:06:26.436206
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::FindInMap as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Get mapping from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1011 at 2021-04-18 17:06:26.436678.  Ran in 0:00:00.000473
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1011 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1022 at 2021-04-18 17:06:26.436936
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::Join as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1022 at 2021-04-18 17:06:26.437420.  Ran in 0:00:00.000486
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1022 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1023 at 2021-04-18 17:06:26.437603
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::Not as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1023 at 2021-04-18 17:06:26.438100.  Ran in 0:00:00.000500
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1023 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W1020 at 2021-04-18 17:06:26.438285
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W1020 at 2021-04-18 17:06:26.438430.  Ran in 0:00:00.000147
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W1020 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1018 at 2021-04-18 17:06:26.438760
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::Split as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1018 at 2021-04-18 17:06:26.439148.  Ran in 0:00:00.000390
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1018 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1029 at 2021-04-18 17:06:26.439321
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1029 at 2021-04-18 17:06:26.440112.  Ran in 0:00:00.000804
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1029 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1020 at 2021-04-18 17:06:26.440390
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Ref as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1020 at 2021-04-18 17:06:26.440956.  Ran in 0:00:00.000569
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1020 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1019 at 2021-04-18 17:06:26.441238
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::Sub as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get valid GetAtts from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1019 at 2021-04-18 17:06:26.446684.  Ran in 0:00:00.005448
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1019 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1012 at 2021-04-18 17:06:26.446849
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Ref as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Get all valid REFs from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1012 at 2021-04-18 17:06:26.447356.  Ran in 0:00:00.000509
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1012 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1017 at 2021-04-18 17:06:26.447518
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::Select as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1017 at 2021-04-18 17:06:26.448054.  Ran in 0:00:00.000541
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1017 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W1011 at 2021-04-18 17:06:26.448358
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::FindInMap as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Get mapping from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W1011 at 2021-04-18 17:06:26.448840.  Ran in 0:00:00.000484
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W1011 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1015 at 2021-04-18 17:06:26.449005
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::GetAZs as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1015 at 2021-04-18 17:06:26.449512.  Ran in 0:00:00.000510
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1015 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1026 at 2021-04-18 17:06:26.449753
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Ref as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Get the names of all resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1026 at 2021-04-18 17:06:26.450425.  Ran in 0:00:00.000674
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1026 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1016 at 2021-04-18 17:06:26.450590
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::ImportValue as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1016 at 2021-04-18 17:06:26.450950.  Ran in 0:00:00.000361
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1016 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1028 at 2021-04-18 17:06:26.451204
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::If as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1028 at 2021-04-18 17:06:26.451564.  Ran in 0:00:00.000362
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1028 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1004 at 2021-04-18 17:06:26.451732
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1004 at 2021-04-18 17:06:26.451817.  Ran in 0:00:00.000087
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1004 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1002 at 2021-04-18 17:06:26.451971
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1002 at 2021-04-18 17:06:26.452143.  Ran in 0:00:00.000174
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1002 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1003 at 2021-04-18 17:06:26.452309
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1003 at 2021-04-18 17:06:26.452390.  Ran in 0:00:00.000083
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1003 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1001 at 2021-04-18 17:06:26.452541
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1001 at 2021-04-18 17:06:26.452622.  Ran in 0:00:00.000083
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1001 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E7001 at 2021-04-18 17:06:26.452772
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E7001 at 2021-04-18 17:06:26.452858.  Ran in 0:00:00.000087
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E7001 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W7001 at 2021-04-18 17:06:26.453008
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W7001 at 2021-04-18 17:06:26.453090.  Ran in 0:00:00.000083
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W7001 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E7010 at 2021-04-18 17:06:26.453357
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E7010 at 2021-04-18 17:06:26.453464.  Ran in 0:00:00.000108
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E7010 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E7012 at 2021-04-18 17:06:26.453625
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E7012 at 2021-04-18 17:06:26.453711.  Ran in 0:00:00.000087
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E7012 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E7003 at 2021-04-18 17:06:26.453861
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E7003 at 2021-04-18 17:06:26.453943.  Ran in 0:00:00.000083
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E7003 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E7011 at 2021-04-18 17:06:26.454091
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E7011 at 2021-04-18 17:06:26.454173.  Ran in 0:00:00.000083
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E7011 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E7002 at 2021-04-18 17:06:26.454411
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E7002 at 2021-04-18 17:06:26.454526.  Ran in 0:00:00.000117
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E7002 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E6001 at 2021-04-18 17:06:26.454693
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E6001 at 2021-04-18 17:06:26.454801.  Ran in 0:00:00.000110
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E6001 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E6005 at 2021-04-18 17:06:26.454959
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E6005 at 2021-04-18 17:06:26.455048.  Ran in 0:00:00.000091
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E6005 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E6010 at 2021-04-18 17:06:26.455202
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E6010 at 2021-04-18 17:06:26.455285.  Ran in 0:00:00.000084
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E6010 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E6002 at 2021-04-18 17:06:26.455523
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E6002 at 2021-04-18 17:06:26.455633.  Ran in 0:00:00.000112
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E6002 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E6011 at 2021-04-18 17:06:26.455798
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E6011 at 2021-04-18 17:06:26.455884.  Ran in 0:00:00.000087
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E6011 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E6003 at 2021-04-18 17:06:26.456035
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::GetAtt as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Ref as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E6003 at 2021-04-18 17:06:26.456705.  Ran in 0:00:00.000672
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E6003 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E6012 at 2021-04-18 17:06:26.456876
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E6012 at 2021-04-18 17:06:26.456966.  Ran in 0:00:00.000091
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E6012 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E6004 at 2021-04-18 17:06:26.457117
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E6004 at 2021-04-18 17:06:26.457219.  Ran in 0:00:00.000104
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E6004 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W6001 at 2021-04-18 17:06:26.457572
+[2021-04-18T21:06:26Z] DEBUG    - Search for key Fn::ImportValue as far down as the template goes
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W6001 at 2021-04-18 17:06:26.457929.  Ran in 0:00:00.000359
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W6001 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W4001 at 2021-04-18 17:06:26.458089
+[2021-04-18T21:06:26Z] DEBUG    - Get names of all parameters from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W4001 at 2021-04-18 17:06:26.458249.  Ran in 0:00:00.000161
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W4001 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E4001 at 2021-04-18 17:06:26.458400
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E4001 at 2021-04-18 17:06:26.458483.  Ran in 0:00:00.000085
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E4001 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2507 at 2021-04-18 17:06:26.458766
+[2021-04-18T21:06:26Z] DEBUG    - Check value KeyPolicy for {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key KeyPolicy in {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2507 at 2021-04-18 17:06:26.459186.  Ran in 0:00:00.000422
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2507 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2511 at 2021-04-18 17:06:26.459351
+[2021-04-18T21:06:26Z] DEBUG    - Check value KeyPolicy for {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key KeyPolicy in {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2511 at 2021-04-18 17:06:26.459699.  Ran in 0:00:00.000350
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2511 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3030 at 2021-04-18 17:06:26.459885
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3030 at 2021-04-18 17:06:26.460005.  Ran in 0:00:00.000122
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3008 at 2021-04-18 17:06:26.460271
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3008 at 2021-04-18 17:06:26.460381.  Ran in 0:00:00.000112
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3008 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3012 at 2021-04-18 17:06:26.460553
+[2021-04-18T21:06:26Z] DEBUG    - Check value Enabled for {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key Enabled in {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value EnableKeyRotation for {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key EnableKeyRotation in {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value KeyPolicy for {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key KeyPolicy in {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3012 at 2021-04-18 17:06:26.461549.  Ran in 0:00:00.000998
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3012 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3033 at 2021-04-18 17:06:26.461735
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3033 at 2021-04-18 17:06:26.461837.  Ran in 0:00:00.000104
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3033 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3003 at 2021-04-18 17:06:26.462008
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3003 at 2021-04-18 17:06:26.462104.  Ran in 0:00:00.000098
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3003 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3502 at 2021-04-18 17:06:26.462374
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3502 at 2021-04-18 17:06:26.462494.  Ran in 0:00:00.000122
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3502 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3037 at 2021-04-18 17:06:26.462672
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3037 at 2021-04-18 17:06:26.462770.  Ran in 0:00:00.000099
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3037 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3032 at 2021-04-18 17:06:26.462937
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3032 at 2021-04-18 17:06:26.463051.  Ran in 0:00:00.000115
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3032 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3031 at 2021-04-18 17:06:26.463218
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3031 at 2021-04-18 17:06:26.463312.  Ran in 0:00:00.000095
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3034 at 2021-04-18 17:06:26.463474
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3034 at 2021-04-18 17:06:26.463567.  Ran in 0:00:00.000095
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3034 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2030 at 2021-04-18 17:06:26.463764
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2030 at 2021-04-18 17:06:26.463858.  Ran in 0:00:00.000096
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2031 at 2021-04-18 17:06:26.464026
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2031 at 2021-04-18 17:06:26.464125.  Ran in 0:00:00.000101
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1027 at 2021-04-18 17:06:26.464307
+[2021-04-18T21:06:26Z] DEBUG    - Check value Enabled for {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key Enabled in {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value EnableKeyRotation for {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key EnableKeyRotation in {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value KeyPolicy for {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key KeyPolicy in {'Enabled': True, 'EnableKeyRotation': True, 'KeyPolicy': {'Version': '2012-10-17', 'Statement': [{'Sid': 'Give AWS account:root full control over the KMS key', 'Effect': 'Allow', 'Principal': {'AWS': {'Fn::Sub': 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'}}, 'Action': ['kms:*'], 'Resource': '*'}, {'Sid': 'Give ReadOnlyRole access to use KMS key for decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['kms:Decrypt', 'kms:DescribeKey'], 'Resource': '*'}, {'Sid': 'Give the ReadWriteRole access to use KMS key for encryption and decryption', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['kms:Encrypt', 'kms:Decrypt', 'kms:ReEncrypt', 'kms:GenerateDataKey*', 'kms:DescribeKey'], 'Resource': '*'}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1027 at 2021-04-18 17:06:26.465206.  Ran in 0:00:00.000902
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1027 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3030 at 2021-04-18 17:06:26.465701
+[2021-04-18T21:06:26Z] DEBUG    - Check value AliasName for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key AliasName in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value TargetKeyId for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key TargetKeyId in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3030 at 2021-04-18 17:06:26.466311.  Ran in 0:00:00.000612
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3008 at 2021-04-18 17:06:26.466500
+[2021-04-18T21:06:26Z] DEBUG    - Check value AliasName for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key AliasName in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value TargetKeyId for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key TargetKeyId in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get parameters from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3008 at 2021-04-18 17:06:26.467178.  Ran in 0:00:00.000680
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3008 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3012 at 2021-04-18 17:06:26.467358
+[2021-04-18T21:06:26Z] DEBUG    - Check value AliasName for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key AliasName in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value TargetKeyId for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key TargetKeyId in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3012 at 2021-04-18 17:06:26.467810.  Ran in 0:00:00.000453
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3012 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3033 at 2021-04-18 17:06:26.467983
+[2021-04-18T21:06:26Z] DEBUG    - Check value AliasName for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key AliasName in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value TargetKeyId for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key TargetKeyId in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3033 at 2021-04-18 17:06:26.468447.  Ran in 0:00:00.000466
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3033 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3003 at 2021-04-18 17:06:26.468624
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3003 at 2021-04-18 17:06:26.468721.  Ran in 0:00:00.000098
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3003 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3502 at 2021-04-18 17:06:26.468895
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3502 at 2021-04-18 17:06:26.468991.  Ran in 0:00:00.000097
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3502 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3037 at 2021-04-18 17:06:26.469157
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3037 at 2021-04-18 17:06:26.469249.  Ran in 0:00:00.000094
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3037 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3032 at 2021-04-18 17:06:26.469416
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3032 at 2021-04-18 17:06:26.469510.  Ran in 0:00:00.000095
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3032 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3031 at 2021-04-18 17:06:26.469676
+[2021-04-18T21:06:26Z] DEBUG    - Check value AliasName for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key AliasName in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value TargetKeyId for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key TargetKeyId in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3031 at 2021-04-18 17:06:26.470141.  Ran in 0:00:00.000467
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3034 at 2021-04-18 17:06:26.470311
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3034 at 2021-04-18 17:06:26.470409.  Ran in 0:00:00.000100
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3034 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2030 at 2021-04-18 17:06:26.470606
+[2021-04-18T21:06:26Z] DEBUG    - Check value AliasName for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key AliasName in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value TargetKeyId for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key TargetKeyId in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get parameters from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2030 at 2021-04-18 17:06:26.471244.  Ran in 0:00:00.000640
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2031 at 2021-04-18 17:06:26.471420
+[2021-04-18T21:06:26Z] DEBUG    - Check value AliasName for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key AliasName in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value TargetKeyId for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key TargetKeyId in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get parameters from template...
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2031 at 2021-04-18 17:06:26.472055.  Ran in 0:00:00.000637
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1027 at 2021-04-18 17:06:26.472239
+[2021-04-18T21:06:26Z] DEBUG    - Check value AliasName for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key AliasName in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value TargetKeyId for {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key TargetKeyId in {'AliasName': {'Fn::Sub': 'alias/${KMSKeyAlias}'}, 'TargetKeyId': {'Ref': 'KmsKey'}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1027 at 2021-04-18 17:06:26.472705.  Ran in 0:00:00.000467
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1027 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3030 at 2021-04-18 17:06:26.472992
+[2021-04-18T21:06:26Z] DEBUG    - Check value AccessControl for {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key AccessControl in {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value BucketName for {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key BucketName in {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3030 at 2021-04-18 17:06:26.473858.  Ran in 0:00:00.000868
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3008 at 2021-04-18 17:06:26.474067
+[2021-04-18T21:06:26Z] DEBUG    - Check value AccessControl for {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key AccessControl in {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value BucketName for {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key BucketName in {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3008 at 2021-04-18 17:06:26.474599.  Ran in 0:00:00.000534
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3008 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3012 at 2021-04-18 17:06:26.474788
+[2021-04-18T21:06:26Z] DEBUG    - Check value AccessControl for {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key AccessControl in {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value BucketName for {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key BucketName in {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3012 at 2021-04-18 17:06:26.475348.  Ran in 0:00:00.000562
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3012 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3033 at 2021-04-18 17:06:26.475534
+[2021-04-18T21:06:26Z] DEBUG    - Check value BucketName for {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key BucketName in {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3033 at 2021-04-18 17:06:26.475856.  Ran in 0:00:00.000324
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3033 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3003 at 2021-04-18 17:06:26.476035
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3003 at 2021-04-18 17:06:26.476136.  Ran in 0:00:00.000103
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3003 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3502 at 2021-04-18 17:06:26.476308
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3502 at 2021-04-18 17:06:26.476405.  Ran in 0:00:00.000099
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3502 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3037 at 2021-04-18 17:06:26.476573
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3037 at 2021-04-18 17:06:26.476670.  Ran in 0:00:00.000098
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3037 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3032 at 2021-04-18 17:06:26.476836
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3032 at 2021-04-18 17:06:26.476932.  Ran in 0:00:00.000097
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3032 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3031 at 2021-04-18 17:06:26.477098
+[2021-04-18T21:06:26Z] DEBUG    - Check value AccessControl for {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key AccessControl in {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value BucketName for {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key BucketName in {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3031 at 2021-04-18 17:06:26.477630.  Ran in 0:00:00.000534
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3034 at 2021-04-18 17:06:26.477825
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3034 at 2021-04-18 17:06:26.477925.  Ran in 0:00:00.000102
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3034 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2030 at 2021-04-18 17:06:26.478122
+[2021-04-18T21:06:26Z] DEBUG    - Check value AccessControl for {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key AccessControl in {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value BucketName for {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key BucketName in {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2030 at 2021-04-18 17:06:26.478626.  Ran in 0:00:00.000506
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2031 at 2021-04-18 17:06:26.478807
+[2021-04-18T21:06:26Z] DEBUG    - Check value AccessControl for {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key AccessControl in {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value BucketName for {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key BucketName in {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2031 at 2021-04-18 17:06:26.479326.  Ran in 0:00:00.000521
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1027 at 2021-04-18 17:06:26.479514
+[2021-04-18T21:06:26Z] DEBUG    - Check value AccessControl for {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key AccessControl in {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value BucketName for {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key BucketName in {'AccessControl': 'BucketOwnerFullControl', 'BucketEncryption': {'ServerSideEncryptionConfiguration': [{'ServerSideEncryptionByDefault': {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}}]}, 'BucketName': {'Fn::Sub': '${AWS::StackName}-${AWS::AccountId}-${AWS::Region}'}, 'PublicAccessBlockConfiguration': {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1027 at 2021-04-18 17:06:26.480031.  Ran in 0:00:00.000519
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1027 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3030 at 2021-04-18 17:06:26.480370
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3030 at 2021-04-18 17:06:26.480472.  Ran in 0:00:00.000103
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3008 at 2021-04-18 17:06:26.480667
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3008 at 2021-04-18 17:06:26.480760.  Ran in 0:00:00.000095
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3008 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3012 at 2021-04-18 17:06:26.480947
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3012 at 2021-04-18 17:06:26.481031.  Ran in 0:00:00.000086
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3012 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3033 at 2021-04-18 17:06:26.481657
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3033 at 2021-04-18 17:06:26.481843.  Ran in 0:00:00.000188
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3033 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3003 at 2021-04-18 17:06:26.482085
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3003 at 2021-04-18 17:06:26.482194.  Ran in 0:00:00.000110
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3003 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3502 at 2021-04-18 17:06:26.482413
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3502 at 2021-04-18 17:06:26.482516.  Ran in 0:00:00.000104
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3502 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3037 at 2021-04-18 17:06:26.482718
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3037 at 2021-04-18 17:06:26.484329.  Ran in 0:00:00.001619
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3037 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3032 at 2021-04-18 17:06:26.484900
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3032 at 2021-04-18 17:06:26.485098.  Ran in 0:00:00.000201
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3032 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3031 at 2021-04-18 17:06:26.485456
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3031 at 2021-04-18 17:06:26.485625.  Ran in 0:00:00.000171
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3034 at 2021-04-18 17:06:26.485928
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3034 at 2021-04-18 17:06:26.486058.  Ran in 0:00:00.000132
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3034 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2030 at 2021-04-18 17:06:26.486384
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2030 at 2021-04-18 17:06:26.486519.  Ran in 0:00:00.000137
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2031 at 2021-04-18 17:06:26.486798
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2031 at 2021-04-18 17:06:26.486928.  Ran in 0:00:00.000132
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1027 at 2021-04-18 17:06:26.487227
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1027 at 2021-04-18 17:06:26.487358.  Ran in 0:00:00.000133
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1027 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3030 at 2021-04-18 17:06:26.487801
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3030 at 2021-04-18 17:06:26.487943.  Ran in 0:00:00.000145
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3008 at 2021-04-18 17:06:26.488213
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3008 at 2021-04-18 17:06:26.488348.  Ran in 0:00:00.000137
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3008 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3012 at 2021-04-18 17:06:26.488534
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3012 at 2021-04-18 17:06:26.488617.  Ran in 0:00:00.000085
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3012 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3033 at 2021-04-18 17:06:26.488801
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3033 at 2021-04-18 17:06:26.488892.  Ran in 0:00:00.000092
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3033 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3003 at 2021-04-18 17:06:26.489083
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3003 at 2021-04-18 17:06:26.489175.  Ran in 0:00:00.000093
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3003 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3502 at 2021-04-18 17:06:26.489369
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3502 at 2021-04-18 17:06:26.489460.  Ran in 0:00:00.000092
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3502 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3037 at 2021-04-18 17:06:26.489644
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3037 at 2021-04-18 17:06:26.489734.  Ran in 0:00:00.000091
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3037 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3032 at 2021-04-18 17:06:26.489921
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3032 at 2021-04-18 17:06:26.490008.  Ran in 0:00:00.000089
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3032 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3031 at 2021-04-18 17:06:26.490200
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3031 at 2021-04-18 17:06:26.490290.  Ran in 0:00:00.000091
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3034 at 2021-04-18 17:06:26.490474
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3034 at 2021-04-18 17:06:26.490563.  Ran in 0:00:00.000091
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3034 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2030 at 2021-04-18 17:06:26.490780
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2030 at 2021-04-18 17:06:26.490871.  Ran in 0:00:00.000092
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2031 at 2021-04-18 17:06:26.491062
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2031 at 2021-04-18 17:06:26.491151.  Ran in 0:00:00.000091
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1027 at 2021-04-18 17:06:26.491354
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1027 at 2021-04-18 17:06:26.491436.  Ran in 0:00:00.000083
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1027 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3030 at 2021-04-18 17:06:26.491710
+[2021-04-18T21:06:26Z] DEBUG    - Check value SSEAlgorithm for {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key SSEAlgorithm in {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3030 at 2021-04-18 17:06:26.491985.  Ran in 0:00:00.000277
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3008 at 2021-04-18 17:06:26.492173
+[2021-04-18T21:06:26Z] DEBUG    - Check value SSEAlgorithm for {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key SSEAlgorithm in {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3008 at 2021-04-18 17:06:26.492430.  Ran in 0:00:00.000259
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3008 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3012 at 2021-04-18 17:06:26.492616
+[2021-04-18T21:06:26Z] DEBUG    - Check value KMSMasterKeyID for {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key KMSMasterKeyID in {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Check value SSEAlgorithm for {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key SSEAlgorithm in {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3012 at 2021-04-18 17:06:26.493058.  Ran in 0:00:00.000444
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3012 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3033 at 2021-04-18 17:06:26.493247
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3033 at 2021-04-18 17:06:26.493345.  Ran in 0:00:00.000100
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3033 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3003 at 2021-04-18 17:06:26.493533
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3003 at 2021-04-18 17:06:26.493626.  Ran in 0:00:00.000094
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3003 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3502 at 2021-04-18 17:06:26.493814
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3502 at 2021-04-18 17:06:26.493909.  Ran in 0:00:00.000097
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3502 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3037 at 2021-04-18 17:06:26.494093
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3037 at 2021-04-18 17:06:26.494184.  Ran in 0:00:00.000093
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3037 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3032 at 2021-04-18 17:06:26.494376
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3032 at 2021-04-18 17:06:26.494468.  Ran in 0:00:00.000093
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3032 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3031 at 2021-04-18 17:06:26.494652
+[2021-04-18T21:06:26Z] DEBUG    - Check value SSEAlgorithm for {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key SSEAlgorithm in {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3031 at 2021-04-18 17:06:26.494909.  Ran in 0:00:00.000258
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3034 at 2021-04-18 17:06:26.495094
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3034 at 2021-04-18 17:06:26.495187.  Ran in 0:00:00.000094
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3034 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2030 at 2021-04-18 17:06:26.495397
+[2021-04-18T21:06:26Z] DEBUG    - Check value SSEAlgorithm for {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key SSEAlgorithm in {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2030 at 2021-04-18 17:06:26.495674.  Ran in 0:00:00.000279
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2031 at 2021-04-18 17:06:26.495982
+[2021-04-18T21:06:26Z] DEBUG    - Check value SSEAlgorithm for {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key SSEAlgorithm in {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2031 at 2021-04-18 17:06:26.496267.  Ran in 0:00:00.000287
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1027 at 2021-04-18 17:06:26.496477
+[2021-04-18T21:06:26Z] DEBUG    - Check value KMSMasterKeyID for {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key KMSMasterKeyID in {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Check value SSEAlgorithm for {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key SSEAlgorithm in {'KMSMasterKeyID': {'Ref': 'KmsKey'}, 'SSEAlgorithm': 'aws:kms'}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1027 at 2021-04-18 17:06:26.496928.  Ran in 0:00:00.000453
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1027 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3030 at 2021-04-18 17:06:26.497218
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3030 at 2021-04-18 17:06:26.497480.  Ran in 0:00:00.000268
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3008 at 2021-04-18 17:06:26.497915
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3008 at 2021-04-18 17:06:26.498042.  Ran in 0:00:00.000129
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3008 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3012 at 2021-04-18 17:06:26.498245
+[2021-04-18T21:06:26Z] DEBUG    - Check value BlockPublicAcls for {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key BlockPublicAcls in {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Check value IgnorePublicAcls for {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key IgnorePublicAcls in {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Check value BlockPublicPolicy for {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key BlockPublicPolicy in {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Check value RestrictPublicBuckets for {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key RestrictPublicBuckets in {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3012 at 2021-04-18 17:06:26.498985.  Ran in 0:00:00.000741
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3012 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3033 at 2021-04-18 17:06:26.499174
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3033 at 2021-04-18 17:06:26.499271.  Ran in 0:00:00.000099
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3033 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3003 at 2021-04-18 17:06:26.499462
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3003 at 2021-04-18 17:06:26.499555.  Ran in 0:00:00.000094
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3003 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3502 at 2021-04-18 17:06:26.499745
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3502 at 2021-04-18 17:06:26.499837.  Ran in 0:00:00.000093
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3502 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3037 at 2021-04-18 17:06:26.500021
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3037 at 2021-04-18 17:06:26.500112.  Ran in 0:00:00.000093
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3037 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3032 at 2021-04-18 17:06:26.500299
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3032 at 2021-04-18 17:06:26.500391.  Ran in 0:00:00.000093
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3032 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3031 at 2021-04-18 17:06:26.500578
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3031 at 2021-04-18 17:06:26.500670.  Ran in 0:00:00.000093
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3034 at 2021-04-18 17:06:26.500853
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3034 at 2021-04-18 17:06:26.500945.  Ran in 0:00:00.000093
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3034 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2030 at 2021-04-18 17:06:26.501161
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2030 at 2021-04-18 17:06:26.501255.  Ran in 0:00:00.000096
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2031 at 2021-04-18 17:06:26.501451
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2031 at 2021-04-18 17:06:26.501542.  Ran in 0:00:00.000093
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1027 at 2021-04-18 17:06:26.501746
+[2021-04-18T21:06:26Z] DEBUG    - Check value BlockPublicAcls for {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key BlockPublicAcls in {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Check value IgnorePublicAcls for {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key IgnorePublicAcls in {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Check value BlockPublicPolicy for {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key BlockPublicPolicy in {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Check value RestrictPublicBuckets for {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key RestrictPublicBuckets in {'BlockPublicAcls': True, 'IgnorePublicAcls': True, 'BlockPublicPolicy': True, 'RestrictPublicBuckets': True}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1027 at 2021-04-18 17:06:26.502475.  Ran in 0:00:00.000730
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1027 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E2507 at 2021-04-18 17:06:26.502726
+[2021-04-18T21:06:26Z] DEBUG    - Check value PolicyDocument for {'Bucket': {'Ref': 'Bucket'}, 'PolicyDocument': {'Version': '2012-10-17', 'Statement': [{'Sid': 'DenyIncorrectEncryptionHeader', 'Effect': 'Deny', 'Principal': '*', 'Action': 's3:PutObject', 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-server-side-encryption': 'AES256'}}}, {'Sid': 'DenyPublicReadACL', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-acl': ['public-read', 'public-read-write', 'authenticated-read']}}}, {'Sid': 'DenyPublicReadGrant', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringLike': {'s3:x-amz-grant-read': ['*http://acs.amazonaws.com/groups/global/AllUsers*', '*http://acs.amazonaws.com/groups/global/AuthenticatedUsers*']}}}, {'Sid': 'DenyNonHttpsConnections', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:GetObject'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'Bool': {'aws:SecureTransport': False}}}, {'Sid': 'Give ReadOnlyRole access to get objects from bucket and list bucket', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['s3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}, {'Sid': 'Give the ReadWriteRole access to get and put objects from and to bucket and list bucket and multipart uploads', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['s3:DeleteObject', 's3:DeleteObjectTagging', 's3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags', 's3:PutObject', 's3:PutObjectTagging'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key PolicyDocument in {'Bucket': {'Ref': 'Bucket'}, 'PolicyDocument': {'Version': '2012-10-17', 'Statement': [{'Sid': 'DenyIncorrectEncryptionHeader', 'Effect': 'Deny', 'Principal': '*', 'Action': 's3:PutObject', 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-server-side-encryption': 'AES256'}}}, {'Sid': 'DenyPublicReadACL', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-acl': ['public-read', 'public-read-write', 'authenticated-read']}}}, {'Sid': 'DenyPublicReadGrant', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringLike': {'s3:x-amz-grant-read': ['*http://acs.amazonaws.com/groups/global/AllUsers*', '*http://acs.amazonaws.com/groups/global/AuthenticatedUsers*']}}}, {'Sid': 'DenyNonHttpsConnections', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:GetObject'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'Bool': {'aws:SecureTransport': False}}}, {'Sid': 'Give ReadOnlyRole access to get objects from bucket and list bucket', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['s3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}, {'Sid': 'Give the ReadWriteRole access to get and put objects from and to bucket and list bucket and multipart uploads', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['s3:DeleteObject', 's3:DeleteObjectTagging', 's3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags', 's3:PutObject', 's3:PutObjectTagging'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E2507 at 2021-04-18 17:06:26.503276.  Ran in 0:00:00.000551
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E2507 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2511 at 2021-04-18 17:06:26.503449
+[2021-04-18T21:06:26Z] DEBUG    - Check value PolicyDocument for {'Bucket': {'Ref': 'Bucket'}, 'PolicyDocument': {'Version': '2012-10-17', 'Statement': [{'Sid': 'DenyIncorrectEncryptionHeader', 'Effect': 'Deny', 'Principal': '*', 'Action': 's3:PutObject', 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-server-side-encryption': 'AES256'}}}, {'Sid': 'DenyPublicReadACL', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-acl': ['public-read', 'public-read-write', 'authenticated-read']}}}, {'Sid': 'DenyPublicReadGrant', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringLike': {'s3:x-amz-grant-read': ['*http://acs.amazonaws.com/groups/global/AllUsers*', '*http://acs.amazonaws.com/groups/global/AuthenticatedUsers*']}}}, {'Sid': 'DenyNonHttpsConnections', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:GetObject'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'Bool': {'aws:SecureTransport': False}}}, {'Sid': 'Give ReadOnlyRole access to get objects from bucket and list bucket', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['s3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}, {'Sid': 'Give the ReadWriteRole access to get and put objects from and to bucket and list bucket and multipart uploads', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['s3:DeleteObject', 's3:DeleteObjectTagging', 's3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags', 's3:PutObject', 's3:PutObjectTagging'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key PolicyDocument in {'Bucket': {'Ref': 'Bucket'}, 'PolicyDocument': {'Version': '2012-10-17', 'Statement': [{'Sid': 'DenyIncorrectEncryptionHeader', 'Effect': 'Deny', 'Principal': '*', 'Action': 's3:PutObject', 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-server-side-encryption': 'AES256'}}}, {'Sid': 'DenyPublicReadACL', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-acl': ['public-read', 'public-read-write', 'authenticated-read']}}}, {'Sid': 'DenyPublicReadGrant', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringLike': {'s3:x-amz-grant-read': ['*http://acs.amazonaws.com/groups/global/AllUsers*', '*http://acs.amazonaws.com/groups/global/AuthenticatedUsers*']}}}, {'Sid': 'DenyNonHttpsConnections', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:GetObject'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'Bool': {'aws:SecureTransport': False}}}, {'Sid': 'Give ReadOnlyRole access to get objects from bucket and list bucket', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['s3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}, {'Sid': 'Give the ReadWriteRole access to get and put objects from and to bucket and list bucket and multipart uploads', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['s3:DeleteObject', 's3:DeleteObjectTagging', 's3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags', 's3:PutObject', 's3:PutObjectTagging'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2511 at 2021-04-18 17:06:26.503870.  Ran in 0:00:00.000423
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2511 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3030 at 2021-04-18 17:06:26.504068
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3030 at 2021-04-18 17:06:26.504164.  Ran in 0:00:00.000098
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3008 at 2021-04-18 17:06:26.504354
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3008 at 2021-04-18 17:06:26.504586.  Ran in 0:00:00.000236
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3008 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3012 at 2021-04-18 17:06:26.505031
+[2021-04-18T21:06:26Z] DEBUG    - Check value Bucket for {'Bucket': {'Ref': 'Bucket'}, 'PolicyDocument': {'Version': '2012-10-17', 'Statement': [{'Sid': 'DenyIncorrectEncryptionHeader', 'Effect': 'Deny', 'Principal': '*', 'Action': 's3:PutObject', 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-server-side-encryption': 'AES256'}}}, {'Sid': 'DenyPublicReadACL', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-acl': ['public-read', 'public-read-write', 'authenticated-read']}}}, {'Sid': 'DenyPublicReadGrant', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringLike': {'s3:x-amz-grant-read': ['*http://acs.amazonaws.com/groups/global/AllUsers*', '*http://acs.amazonaws.com/groups/global/AuthenticatedUsers*']}}}, {'Sid': 'DenyNonHttpsConnections', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:GetObject'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'Bool': {'aws:SecureTransport': False}}}, {'Sid': 'Give ReadOnlyRole access to get objects from bucket and list bucket', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['s3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}, {'Sid': 'Give the ReadWriteRole access to get and put objects from and to bucket and list bucket and multipart uploads', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['s3:DeleteObject', 's3:DeleteObjectTagging', 's3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags', 's3:PutObject', 's3:PutObjectTagging'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key Bucket in {'Bucket': {'Ref': 'Bucket'}, 'PolicyDocument': {'Version': '2012-10-17', 'Statement': [{'Sid': 'DenyIncorrectEncryptionHeader', 'Effect': 'Deny', 'Principal': '*', 'Action': 's3:PutObject', 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-server-side-encryption': 'AES256'}}}, {'Sid': 'DenyPublicReadACL', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-acl': ['public-read', 'public-read-write', 'authenticated-read']}}}, {'Sid': 'DenyPublicReadGrant', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringLike': {'s3:x-amz-grant-read': ['*http://acs.amazonaws.com/groups/global/AllUsers*', '*http://acs.amazonaws.com/groups/global/AuthenticatedUsers*']}}}, {'Sid': 'DenyNonHttpsConnections', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:GetObject'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'Bool': {'aws:SecureTransport': False}}}, {'Sid': 'Give ReadOnlyRole access to get objects from bucket and list bucket', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['s3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}, {'Sid': 'Give the ReadWriteRole access to get and put objects from and to bucket and list bucket and multipart uploads', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['s3:DeleteObject', 's3:DeleteObjectTagging', 's3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags', 's3:PutObject', 's3:PutObjectTagging'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value PolicyDocument for {'Bucket': {'Ref': 'Bucket'}, 'PolicyDocument': {'Version': '2012-10-17', 'Statement': [{'Sid': 'DenyIncorrectEncryptionHeader', 'Effect': 'Deny', 'Principal': '*', 'Action': 's3:PutObject', 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-server-side-encryption': 'AES256'}}}, {'Sid': 'DenyPublicReadACL', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-acl': ['public-read', 'public-read-write', 'authenticated-read']}}}, {'Sid': 'DenyPublicReadGrant', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringLike': {'s3:x-amz-grant-read': ['*http://acs.amazonaws.com/groups/global/AllUsers*', '*http://acs.amazonaws.com/groups/global/AuthenticatedUsers*']}}}, {'Sid': 'DenyNonHttpsConnections', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:GetObject'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'Bool': {'aws:SecureTransport': False}}}, {'Sid': 'Give ReadOnlyRole access to get objects from bucket and list bucket', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['s3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}, {'Sid': 'Give the ReadWriteRole access to get and put objects from and to bucket and list bucket and multipart uploads', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['s3:DeleteObject', 's3:DeleteObjectTagging', 's3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags', 's3:PutObject', 's3:PutObjectTagging'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key PolicyDocument in {'Bucket': {'Ref': 'Bucket'}, 'PolicyDocument': {'Version': '2012-10-17', 'Statement': [{'Sid': 'DenyIncorrectEncryptionHeader', 'Effect': 'Deny', 'Principal': '*', 'Action': 's3:PutObject', 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-server-side-encryption': 'AES256'}}}, {'Sid': 'DenyPublicReadACL', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-acl': ['public-read', 'public-read-write', 'authenticated-read']}}}, {'Sid': 'DenyPublicReadGrant', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringLike': {'s3:x-amz-grant-read': ['*http://acs.amazonaws.com/groups/global/AllUsers*', '*http://acs.amazonaws.com/groups/global/AuthenticatedUsers*']}}}, {'Sid': 'DenyNonHttpsConnections', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:GetObject'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'Bool': {'aws:SecureTransport': False}}}, {'Sid': 'Give ReadOnlyRole access to get objects from bucket and list bucket', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['s3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}, {'Sid': 'Give the ReadWriteRole access to get and put objects from and to bucket and list bucket and multipart uploads', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['s3:DeleteObject', 's3:DeleteObjectTagging', 's3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags', 's3:PutObject', 's3:PutObjectTagging'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3012 at 2021-04-18 17:06:26.506374.  Ran in 0:00:00.001348
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3012 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3033 at 2021-04-18 17:06:26.506601
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3033 at 2021-04-18 17:06:26.506718.  Ran in 0:00:00.000119
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3033 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3003 at 2021-04-18 17:06:26.506906
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3003 at 2021-04-18 17:06:26.507009.  Ran in 0:00:00.000105
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3003 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3502 at 2021-04-18 17:06:26.507193
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3502 at 2021-04-18 17:06:26.507293.  Ran in 0:00:00.000102
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3502 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3037 at 2021-04-18 17:06:26.507471
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3037 at 2021-04-18 17:06:26.507573.  Ran in 0:00:00.000104
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3037 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3032 at 2021-04-18 17:06:26.507753
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3032 at 2021-04-18 17:06:26.507852.  Ran in 0:00:00.000101
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3032 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3031 at 2021-04-18 17:06:26.508031
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3031 at 2021-04-18 17:06:26.508129.  Ran in 0:00:00.000100
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E3034 at 2021-04-18 17:06:26.508304
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E3034 at 2021-04-18 17:06:26.508401.  Ran in 0:00:00.000098
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E3034 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2030 at 2021-04-18 17:06:26.508610
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2030 at 2021-04-18 17:06:26.508710.  Ran in 0:00:00.000101
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2030 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule W2031 at 2021-04-18 17:06:26.508892
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule W2031 at 2021-04-18 17:06:26.508992.  Ran in 0:00:00.000102
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule W2031 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Starting match function for rule E1027 at 2021-04-18 17:06:26.509184
+[2021-04-18T21:06:26Z] DEBUG    - Check value Bucket for {'Bucket': {'Ref': 'Bucket'}, 'PolicyDocument': {'Version': '2012-10-17', 'Statement': [{'Sid': 'DenyIncorrectEncryptionHeader', 'Effect': 'Deny', 'Principal': '*', 'Action': 's3:PutObject', 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-server-side-encryption': 'AES256'}}}, {'Sid': 'DenyPublicReadACL', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-acl': ['public-read', 'public-read-write', 'authenticated-read']}}}, {'Sid': 'DenyPublicReadGrant', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringLike': {'s3:x-amz-grant-read': ['*http://acs.amazonaws.com/groups/global/AllUsers*', '*http://acs.amazonaws.com/groups/global/AuthenticatedUsers*']}}}, {'Sid': 'DenyNonHttpsConnections', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:GetObject'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'Bool': {'aws:SecureTransport': False}}}, {'Sid': 'Give ReadOnlyRole access to get objects from bucket and list bucket', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['s3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}, {'Sid': 'Give the ReadWriteRole access to get and put objects from and to bucket and list bucket and multipart uploads', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['s3:DeleteObject', 's3:DeleteObjectTagging', 's3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags', 's3:PutObject', 's3:PutObjectTagging'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key Bucket in {'Bucket': {'Ref': 'Bucket'}, 'PolicyDocument': {'Version': '2012-10-17', 'Statement': [{'Sid': 'DenyIncorrectEncryptionHeader', 'Effect': 'Deny', 'Principal': '*', 'Action': 's3:PutObject', 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-server-side-encryption': 'AES256'}}}, {'Sid': 'DenyPublicReadACL', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-acl': ['public-read', 'public-read-write', 'authenticated-read']}}}, {'Sid': 'DenyPublicReadGrant', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringLike': {'s3:x-amz-grant-read': ['*http://acs.amazonaws.com/groups/global/AllUsers*', '*http://acs.amazonaws.com/groups/global/AuthenticatedUsers*']}}}, {'Sid': 'DenyNonHttpsConnections', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:GetObject'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'Bool': {'aws:SecureTransport': False}}}, {'Sid': 'Give ReadOnlyRole access to get objects from bucket and list bucket', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['s3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}, {'Sid': 'Give the ReadWriteRole access to get and put objects from and to bucket and list bucket and multipart uploads', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['s3:DeleteObject', 's3:DeleteObjectTagging', 's3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags', 's3:PutObject', 's3:PutObjectTagging'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Check value PolicyDocument for {'Bucket': {'Ref': 'Bucket'}, 'PolicyDocument': {'Version': '2012-10-17', 'Statement': [{'Sid': 'DenyIncorrectEncryptionHeader', 'Effect': 'Deny', 'Principal': '*', 'Action': 's3:PutObject', 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-server-side-encryption': 'AES256'}}}, {'Sid': 'DenyPublicReadACL', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-acl': ['public-read', 'public-read-write', 'authenticated-read']}}}, {'Sid': 'DenyPublicReadGrant', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringLike': {'s3:x-amz-grant-read': ['*http://acs.amazonaws.com/groups/global/AllUsers*', '*http://acs.amazonaws.com/groups/global/AuthenticatedUsers*']}}}, {'Sid': 'DenyNonHttpsConnections', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:GetObject'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'Bool': {'aws:SecureTransport': False}}}, {'Sid': 'Give ReadOnlyRole access to get objects from bucket and list bucket', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['s3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}, {'Sid': 'Give the ReadWriteRole access to get and put objects from and to bucket and list bucket and multipart uploads', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['s3:DeleteObject', 's3:DeleteObjectTagging', 's3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags', 's3:PutObject', 's3:PutObjectTagging'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Get the value for key PolicyDocument in {'Bucket': {'Ref': 'Bucket'}, 'PolicyDocument': {'Version': '2012-10-17', 'Statement': [{'Sid': 'DenyIncorrectEncryptionHeader', 'Effect': 'Deny', 'Principal': '*', 'Action': 's3:PutObject', 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-server-side-encryption': 'AES256'}}}, {'Sid': 'DenyPublicReadACL', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringEquals': {'s3:x-amz-acl': ['public-read', 'public-read-write', 'authenticated-read']}}}, {'Sid': 'DenyPublicReadGrant', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:PutObjectAcl'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'StringLike': {'s3:x-amz-grant-read': ['*http://acs.amazonaws.com/groups/global/AllUsers*', '*http://acs.amazonaws.com/groups/global/AuthenticatedUsers*']}}}, {'Sid': 'DenyNonHttpsConnections', 'Effect': 'Deny', 'Principal': '*', 'Action': ['s3:PutObject', 's3:GetObject'], 'Resource': {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}, 'Condition': {'Bool': {'aws:SecureTransport': False}}}, {'Sid': 'Give ReadOnlyRole access to get objects from bucket and list bucket', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadOnlyArn'}}, 'Action': ['s3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}, {'Sid': 'Give the ReadWriteRole access to get and put objects from and to bucket and list bucket and multipart uploads', 'Effect': 'Allow', 'Principal': {'AWS': {'Ref': 'ReadWriteArn'}}, 'Action': ['s3:DeleteObject', 's3:DeleteObjectTagging', 's3:GetObject', 's3:GetObjectTagging', 's3:ListBucket', 's3:ListBucketByTags', 's3:PutObject', 's3:PutObjectTagging'], 'Resource': [{'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}'}, {'Fn::Sub': 'arn:${AWS::Partition}:s3:::${Bucket}/*'}]}]}}
+[2021-04-18T21:06:26Z] DEBUG    - Complete match function for rule E1027 at 2021-04-18 17:06:26.510014.  Ran in 0:00:00.000832
+[2021-04-18T21:06:26Z] DEBUG    - Results from rule E1027 are []: 
+[2021-04-18T21:06:26Z] DEBUG    - Get resources from template...
+[2021-04-18T21:06:26Z] WARNING  - Module fragment might be valid, but there are warnings from cfn-lint (https://github.com/aws-cloudformation/cfn-python-lint):
+[2021-04-18T21:06:26Z] DEBUG    - Overwriting '/Users/raghavs/cfnmodule/schema.json'
+[2021-04-18T21:06:26Z] DEBUG    - overrides.json not found. Not writing to package.
+[2021-04-18T21:06:26Z] DEBUG    - Packaging complete, uploading...
+[2021-04-18T21:06:26Z] DEBUG    - Uploading to region 'us-east-1'
+[2021-04-18T21:06:27Z] INFO     - Creating CloudFormationManagedUploadInfrastructure
+[2021-04-18T21:06:27Z] DEBUG    - Waiting for stack 'arn:aws:cloudformation:us-east-1:526243136247:stack/CloudFormationManagedUploadInfrastructure/f0ff29b0-a089-11eb-9c7d-0a035b49661f'
+[2021-04-18T21:09:30Z] INFO     - CloudFormationManagedUploadInfrastructure stack was successfully created
+[2021-04-18T21:09:30Z] DEBUG    - Uploading to 'cloudformationmanageduploadinfrast-artifactbucket-1k5z53scr190m/mycompany-s3-bucket-module-2021-04-18T21-09-30.zip'...
+[2021-04-18T21:09:31Z] DEBUG    - Upload complete
+[2021-04-18T21:09:31Z] DEBUG    - Got S3 URL: s3://cloudformationmanageduploadinfrast-artifactbucket-1k5z53scr190m/mycompany-s3-bucket-module-2021-04-18T21-09-30.zip
+[2021-04-18T21:09:31Z] DEBUG    - Got Log Role: arn:aws:iam::526243136247:role/CloudFormationManagedUplo-LogAndMetricsDeliveryRol-Y5UEICB1JMSQ
+[2021-04-18T21:09:31Z] WARNING  - Successfully submitted type. Waiting for registration with token '94307528-3413-4fe0-b96b-a5617214dd70' to complete.
+[2021-04-18T21:10:02Z] WARNING  - Registration complete.
+[2021-04-18T21:10:02Z] WARNING  - {'ProgressStatus': 'COMPLETE', 'Description': 'Deployment is currently in DEPLOY_STAGE of status COMPLETED; ', 'TypeArn': 'arn:aws:cloudformation:us-east-1:526243136247:type/module/MyCompany-S3-Bucket-MODULE', 'TypeVersionArn': 'arn:aws:cloudformation:us-east-1:526243136247:type/module/MyCompany-S3-Bucket-MODULE/00000001', 'ResponseMetadata': {'RequestId': '319b48d2-23a9-49ee-8905-9dce015e98bc', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': '319b48d2-23a9-49ee-8905-9dce015e98bc', 'content-type': 'text/xml', 'content-length': '687', 'date': 'Sun, 18 Apr 2021 21:10:02 GMT'}, 'RetryAttempts': 0}}
+[2021-04-18T21:10:02Z] DEBUG    - Finished submit
